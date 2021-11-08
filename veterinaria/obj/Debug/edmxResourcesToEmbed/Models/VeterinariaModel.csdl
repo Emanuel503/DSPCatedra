@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="veterinariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="consultaMedica">
+    <Key>
+      <PropertyRef Name="idCita" />
+    </Key>
+    <Property Name="idCita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMascota" Type="Int32" />
+    <Property Name="idPersonal" Type="Int32" />
+    <Property Name="descripcionConsulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaConsulta" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="costoConsulta" Type="Double" Nullable="false" />
+    <NavigationProperty Name="mascota" Relationship="Self.FK__consultaM__idMas__3A81B327" FromRole="consultaMedica" ToRole="mascota" />
+    <NavigationProperty Name="personal" Relationship="Self.FK__consultaM__idPer__3B75D760" FromRole="consultaMedica" ToRole="personal" />
+  </EntityType>
+  <EntityType Name="mascota">
+    <Key>
+      <PropertyRef Name="idMascota" />
+    </Key>
+    <Property Name="idMascota" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreMascota" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sexo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="raza" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipoAnimal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="nombreDueno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefonoDueno" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="consultaMedica" Relationship="Self.FK__consultaM__idMas__3A81B327" FromRole="mascota" ToRole="consultaMedica" />
+  </EntityType>
+  <EntityType Name="personal">
+    <Key>
+      <PropertyRef Name="idPersonal" />
+    </Key>
+    <Property Name="idPersonal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="identificacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="especializacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salario" Type="Double" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="consultaMedica" Relationship="Self.FK__consultaM__idPer__3B75D760" FromRole="personal" ToRole="consultaMedica" />
+  </EntityType>
+  <Association Name="FK__consultaM__idMas__3A81B327">
+    <End Role="mascota" Type="Self.mascota" Multiplicity="0..1" />
+    <End Role="consultaMedica" Type="Self.consultaMedica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mascota">
+        <PropertyRef Name="idMascota" />
+      </Principal>
+      <Dependent Role="consultaMedica">
+        <PropertyRef Name="idMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__consultaM__idPer__3B75D760">
+    <End Role="personal" Type="Self.personal" Multiplicity="0..1" />
+    <End Role="consultaMedica" Type="Self.consultaMedica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personal">
+        <PropertyRef Name="idPersonal" />
+      </Principal>
+      <Dependent Role="consultaMedica">
+        <PropertyRef Name="idPersonal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="veterinariaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="consultaMedica" EntityType="Self.consultaMedica" />
+    <EntitySet Name="mascota" EntityType="Self.mascota" />
+    <EntitySet Name="personal" EntityType="Self.personal" />
+    <AssociationSet Name="FK__consultaM__idMas__3A81B327" Association="Self.FK__consultaM__idMas__3A81B327">
+      <End Role="mascota" EntitySet="mascota" />
+      <End Role="consultaMedica" EntitySet="consultaMedica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__consultaM__idPer__3B75D760" Association="Self.FK__consultaM__idPer__3B75D760">
+      <End Role="personal" EntitySet="personal" />
+      <End Role="consultaMedica" EntitySet="consultaMedica" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

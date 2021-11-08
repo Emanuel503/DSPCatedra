@@ -1,0 +1,82 @@
+﻿@model veterinaria.Models.mascota
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>mascota</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreMascota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreMascota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.raza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoAnimal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoAnimal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreDueno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreDueno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonoDueno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonoDueno)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idMascota }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

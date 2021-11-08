@@ -1,0 +1,58 @@
+﻿@model veterinaria.Models.consultaMedica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>consultaMedica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionConsulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionConsulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaConsulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaConsulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costoConsulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costoConsulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mascota.nombreMascota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mascota.nombreMascota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personal.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personal.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCita }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
