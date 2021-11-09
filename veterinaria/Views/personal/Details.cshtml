@@ -4,14 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles del personal</h2>
 
 <div>
-    <h4>personal</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombre)
+            Nombre completo:
         </dt>
 
         <dd>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.identificacion)
+            N° de identificación:
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaIngreso)
+            Fecha de ingreso a la clínica:
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
+            Fecha de nacimiento:
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.especializacion)
+            Especialización:
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.salario)
+            Salario:
         </dt>
 
         <dd>
@@ -59,7 +58,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefono)
+            N° de teléfono
         </dt>
 
         <dd>
@@ -67,7 +66,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.direccion)
+            Dirección:
         </dt>
 
         <dd>
@@ -77,6 +76,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idPersonal }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idPersonal }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
 </p>

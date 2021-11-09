@@ -4,38 +4,40 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registro de personal</h2><br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    @Html.ActionLink("Nuevo personal", "Create", null, new { @class = "btn btn-success" })
+</p><br />
+<table class="table table-bordered table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre)
+            Nombre Completo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.identificacion)
+            N° de Identificación
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaIngreso)
+            Fecha de ingreso a la veterinaria
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
+            Fecha de nacimiento
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.especializacion)
+            Especialización
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.salario)
+            Salario
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.telefono)
+            N° de Telefono
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.direccion)
+            Dirección
         </th>
-        <th></th>
+        <th>
+            Opciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -65,9 +67,9 @@
             @Html.DisplayFor(modelItem => item.direccion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idPersonal }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idPersonal }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idPersonal })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idPersonal }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Detalles", "Details", new { id=item.idPersonal }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idPersonal }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

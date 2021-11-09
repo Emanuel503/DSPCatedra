@@ -11,7 +11,8 @@ namespace veterinaria.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class personal
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,13 +22,36 @@ namespace veterinaria.Models
         }
     
         public int idPersonal { get; set; }
+
+        [Required(ErrorMessage = "El campo nombre es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un nombre valido")]
         public string nombre { get; set; }
+
+        [Required(ErrorMessage = "El campo N° de documento es obligatorio.")]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "Ingrese un numero de documento valido")]
         public string identificacion { get; set; }
-        public System.DateTime fechaIngreso { get; set; }
-        public System.DateTime fechaNacimiento { get; set; }
+
+        [Required(ErrorMessage = "El campo fecha de ingreso es obligatorio.")]
+        [RegularExpression(@"^([0-2][0-9])\/(0[123456789]|10|11|12)\/[0-9]{4}$", ErrorMessage = "Ingrese un fecha de nacimiento valida (DD/MM/AAAA)")]
+        public string fechaIngreso { get; set; }
+
+        [Required(ErrorMessage = "El campo fecha de nacimiento es obligatorio.")]
+        [RegularExpression(@"^([0-2][0-9])\/(0[123456789]|10|11|12)\/[0-9]{4}$", ErrorMessage = "Ingrese un fecha de nacimiento valida (DD/MM/AAAA)")]
+        public string fechaNacimiento { get; set; }
+
+        [Required(ErrorMessage = "El campo especializacion es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese una especializacion valida")]
         public string especializacion { get; set; }
+
+        [Required(ErrorMessage = "El campo salario es obligatorio.")]
+        [RegularExpression(@"^[0-9.]+$", ErrorMessage = "Ingrese un salario valido")]
         public double salario { get; set; }
+
+        [Required(ErrorMessage = "El campo telefono es obligatorio.")]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "Ingrese un telefono valido")]
         public string telefono { get; set; }
+
+        [Required(ErrorMessage = "El campo direccion es obligatorio.")]
         public string direccion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

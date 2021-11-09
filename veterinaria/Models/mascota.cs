@@ -25,8 +25,8 @@ namespace veterinaria.Models
         public string sexo { get; set; }
         public string raza { get; set; }
         public string tipoAnimal { get; set; }
-        public System.DateTime fechaIngreso { get; set; }
-        public System.DateTime fechaNacimiento { get; set; }
+        public string fechaIngreso { get; set; }
+        public string fechaNacimiento { get; set; }
         public string nombreDueno { get; set; }
         public string telefonoDueno { get; set; }
     

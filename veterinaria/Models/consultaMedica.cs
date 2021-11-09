@@ -18,7 +18,7 @@ namespace veterinaria.Models
         public Nullable<int> idMascota { get; set; }
         public Nullable<int> idPersonal { get; set; }
         public string descripcionConsulta { get; set; }
-        public System.DateTime fechaConsulta { get; set; }
+        public string fechaConsulta { get; set; }
         public double costoConsulta { get; set; }
     
         public virtual mascota mascota { get; set; }

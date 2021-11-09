@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{57C73BAA-3B53-421C-9F44-6E5AB95B9EE9}</ProjectGuid>
+    <ProjectGuid>{DF33C124-44C6-4CBE-AC31-E3224505B3D2}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressSSLPort>44388</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -136,28 +136,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\consultaMedica.cs">
-      <DependentUpon>VeterinariaModel.tt</DependentUpon>
+      <DependentUpon>VeterinariaModelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mascota.cs">
-      <DependentUpon>VeterinariaModel.tt</DependentUpon>
+      <DependentUpon>VeterinariaModelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\personal.cs">
-      <DependentUpon>VeterinariaModel.tt</DependentUpon>
+      <DependentUpon>VeterinariaModelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VeterinariaModel.Context.cs">
+    <Compile Include="Models\VeterinariaModelo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeterinariaModel.Context.tt</DependentUpon>
+      <DependentUpon>VeterinariaModelo.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VeterinariaModel.cs">
+    <Compile Include="Models\VeterinariaModelo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeterinariaModel.tt</DependentUpon>
+      <DependentUpon>VeterinariaModelo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\VeterinariaModel.Designer.cs">
+    <Compile Include="Models\VeterinariaModelo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VeterinariaModel.edmx</DependentUpon>
+      <DependentUpon>VeterinariaModelo.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,24 +170,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\VeterinariaModel.Context.tt">
+    <Content Include="Models\VeterinariaModelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>VeterinariaModel.Context.cs</LastGenOutput>
-      <DependentUpon>VeterinariaModel.edmx</DependentUpon>
+      <LastGenOutput>VeterinariaModelo.Context.cs</LastGenOutput>
+      <DependentUpon>VeterinariaModelo.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\VeterinariaModel.tt">
+    <Content Include="Models\VeterinariaModelo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VeterinariaModel.edmx</DependentUpon>
-      <LastGenOutput>VeterinariaModel.cs</LastGenOutput>
+      <DependentUpon>VeterinariaModelo.edmx</DependentUpon>
+      <LastGenOutput>VeterinariaModelo.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\VeterinariaModel.edmx">
+    <EntityDeploy Include="Models\VeterinariaModelo.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VeterinariaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>VeterinariaModelo.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\VeterinariaModel.edmx.diagram">
-      <DependentUpon>VeterinariaModel.edmx</DependentUpon>
+    <Content Include="Models\VeterinariaModelo.edmx.diagram">
+      <DependentUpon>VeterinariaModelo.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -265,9 +265,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62318</DevelopmentServerPort>
+          <DevelopmentServerPort>53569</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44366/</IISUrl>
+          <IISUrl>https://localhost:44388/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
