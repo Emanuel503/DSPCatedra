@@ -11,7 +11,8 @@ namespace veterinaria.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class mascota
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,13 +22,38 @@ namespace veterinaria.Models
         }
     
         public int idMascota { get; set; }
+
+        [Required(ErrorMessage = "El campo nombre es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un nombre valido")]
         public string nombreMascota { get; set; }
+
+        [Required(ErrorMessage = "El campo sexo es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un sexo valido")]
         public string sexo { get; set; }
+
+
+        [Required(ErrorMessage = "El campo raza es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un raza valido")]
         public string raza { get; set; }
+
+        [Required(ErrorMessage = "El campo tipo de animal es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un tipo de animal valido")]
         public string tipoAnimal { get; set; }
+
+        [Required(ErrorMessage = "El campo fecha de ingreso es obligatorio.")]
+        [RegularExpression(@"^([0-2][0-9])\/(0[123456789]|10|11|12)\/[0-9]{4}$", ErrorMessage = "Ingrese un fecha de nacimiento valida (DD/MM/AAAA)")]
         public string fechaIngreso { get; set; }
+
+        [Required(ErrorMessage = "El campo fecha de nacimiento es obligatorio.")]
+        [RegularExpression(@"^([0-2][0-9])\/(0[123456789]|10|11|12)\/[0-9]{4}$", ErrorMessage = "Ingrese un fecha de nacimiento valida (DD/MM/AAAA)")]
         public string fechaNacimiento { get; set; }
+
+        [Required(ErrorMessage = "El campo nombre es obligatorio.")]
+        [RegularExpression(@"^[áéíóúña-zA-Z\s]+$", ErrorMessage = "Ingrese un nombre valido")]
         public string nombreDueno { get; set; }
+
+        [Required(ErrorMessage = "El campo telefono es obligatorio.")]
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "Ingrese un telefono valido")]
         public string telefonoDueno { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

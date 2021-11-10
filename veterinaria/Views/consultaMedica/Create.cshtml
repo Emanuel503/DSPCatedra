@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Registar consulta medica</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,11 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>consultaMedica</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.idMascota, "idMascota", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.idMascota, "Nombre de la mascota:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("idMascota", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.idMascota, "", new { @class = "text-danger" })
@@ -24,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.idPersonal, "idPersonal", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.idPersonal, "Nombre del personal:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("idPersonal", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.idPersonal, "", new { @class = "text-danger" })
@@ -32,7 +31,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.descripcionConsulta, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.descripcionConsulta,"Descripcion de la consulta:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.descripcionConsulta, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.descripcionConsulta, "", new { @class = "text-danger" })
@@ -40,7 +39,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.fechaConsulta, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.fechaConsulta,"Fecha de la consulta:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaConsulta, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.fechaConsulta, "", new { @class = "text-danger" })
@@ -48,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.costoConsulta, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.costoConsulta,"Costo de la consulta:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.costoConsulta, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.costoConsulta, "", new { @class = "text-danger" })
@@ -57,14 +56,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Registrar" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
 </div>
 
 @section Scripts {

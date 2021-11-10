@@ -4,14 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles de la mascota</h2>
 
 <div>
-    <h4>mascota</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombreMascota)
+            Nombre de la mascota:
         </dt>
 
         <dd>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.sexo)
+            Sexo:
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.raza)
+            Raza:
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.tipoAnimal)
+            Tipo de animal:
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaIngreso)
+            Fecha de ingreso:
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
+            Fecha de nacimiento:
         </dt>
 
         <dd>
@@ -59,7 +58,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.nombreDueno)
+            Nombre dueño:
         </dt>
 
         <dd>
@@ -67,7 +66,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.telefonoDueno)
+            N° de telefono
         </dt>
 
         <dd>
@@ -77,6 +76,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idMascota }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idMascota }, new { @class = "btn btn-primary" } )
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
 </p>

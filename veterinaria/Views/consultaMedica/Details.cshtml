@@ -4,14 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles de la consulta</h2>
 
 <div>
-    <h4>consultaMedica</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.descripcionConsulta)
+            Descripcion de la consulta:
         </dt>
 
         <dd>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.fechaConsulta)
+            Fecha de la consulta:
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.costoConsulta)
+            Costo de la consulta:
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.mascota.nombreMascota)
+            Nombre de la mascota
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.personal.nombre)
+            Nombre del dueño:
         </dt>
 
         <dd>
@@ -53,6 +52,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idCita }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idCita }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
 </p>

@@ -22,3 +22,34 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.titulo {
+    text-align: center;
+    background-color: mediumturquoise;
+    padding: 15px;
+    display: inline-block;
+    margin-left: 34%;
+}
+
+.tabla {
+    border-radius: 12px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    box-shadow: 7px 7px 10px #888888;
+    background-color: #0094ff;
+    padding: 7px;
+}
+
+.tabla td {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.tabla td, tr {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}

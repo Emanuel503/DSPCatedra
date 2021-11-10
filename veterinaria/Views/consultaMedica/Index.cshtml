@@ -4,29 +4,31 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registro de consultas</h2><br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    @Html.ActionLink("Nueva consulta", "Create", null, new { @class = "btn btn-success" })
+</p><br />
+<table class="table table-bordered table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.descripcionConsulta)
+            Descripcion de la consulta
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaConsulta)
+            Fecha de la consulta:
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.costoConsulta)
+            Costo de la consulta
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.mascota.nombreMascota)
+            Nombre de la mascota
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.personal.nombre)
+            Nombre del dueño
         </th>
-        <th></th>
+        <th>
+            Opciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -47,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.personal.nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idCita }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idCita }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idCita })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idCita }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Detalles", "Details", new { id=item.idCita }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idCita }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

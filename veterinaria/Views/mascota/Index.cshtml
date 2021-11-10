@@ -4,38 +4,40 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Registro de mascotas</h2><br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    @Html.ActionLink("Nueva mascota", "Create", null, new { @class = "btn btn-success" })
+</p><br />
+<table class="table table-bordered table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombreMascota)
+           Nombre de la mascota
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.sexo)
+            Sexo
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.raza)
+            Raza
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tipoAnimal)
+            Tipo de animal
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaIngreso)
+           Fecha de ingreso
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
+            Fecha de nacimiento
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.nombreDueno)
+           Nombre del dueño
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.telefonoDueno)
+            N° de telefono
         </th>
-        <th></th>
+        <th>
+            Opciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -65,9 +67,9 @@
             @Html.DisplayFor(modelItem => item.telefonoDueno)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idMascota }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idMascota }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idMascota })
+            @Html.ActionLink("Edit", "Edit", new { id=item.idMascota }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "Details", new { id=item.idMascota }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.idMascota }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
