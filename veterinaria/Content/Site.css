@@ -25,31 +25,100 @@ textarea {
 
 .titulo {
     text-align: center;
-    background-color: mediumturquoise;
+    background-image: radial-gradient(circle at 51.76% 50%, #9affff 0, #71eaff 25%, #33d1ff 50%, #00b8ee 75%, #00a2df 100%);
     padding: 15px;
     display: inline-block;
     margin-left: 34%;
+    border-radius: 30px;
 }
 
-.tabla {
+.quienesSomos {
     border-radius: 12px;
     margin: auto;
     border-collapse: separate;
     border-spacing: 10px 5px;
     box-shadow: 7px 7px 10px #888888;
-    background-color: #0094ff;
+    background-image: radial-gradient(circle at 50% -20.71%, #ffffcf 0, #ffffca 8.33%, #f8ffc5 16.67%, #eafec0 25%, #dafabc 33.33%, #c9f6b8 41.67%, #b5f2b5 50%, #a0edb4 58.33%, #8ae9b5 66.67%, #71e5b8 75%, #56e2bd 83.33%, #2fdec3 91.67%, #00dbcb 100%);
     padding: 7px;
 }
 
-.tabla td {
+.quienesSomos td {
     text-align: center;
     padding: 10px 20px;
     margin: 10px;
+    font-size: 15px;
+    border-radius: 30px;
+    background-image: radial-gradient(circle at 49.69% 51.73%, #fffffe 0, #fcffef 25%, #e6ffdd 50%, #cff1cc 75%, #bbe5c1 100%);
+    color: black;
 }
 
-.tabla td, tr {
-    border-radius: 20px;
-    background-color: white;
+.quienesSomos tr {
+       
+    background-image: radial-gradient(circle at 49.69% 51.73%, #fffffe 0, #fcffef 25%, #e6ffdd 50%, #cff1cc 75%, #bbe5c1 100%);
     color: black;
-    font-size: 15px;
+}
+
+.imagen1 {
+    border-radius: 30px;
+    color: black;
+    width: 30%;
+}
+
+p {
+    line-height: 2em;
+    font-size: 16px;
+    text-align: justify;
+    color: black;
+}
+
+.P1 {
+    background: #18a3ff;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.P2 {
+    background: #18a3ff;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.P3 {
+    background: #18a3ff;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.servicios {
+    width: 1000px;
+    list-style: none;
+    margin-left: 70px;
+}
+
+.servicios li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: #18a3ff;
+    color: white;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.servicios li img {
+    height: 100px;
+    width: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.parrafo1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.parrafo2 {
+    font-size: 20px;
+    text-align: center;
 }

@@ -181,6 +181,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\Estetoscopio.png" />
+    <Content Include="img\imagen.png" />
+    <Content Include="img\imagen1.gif" />
+    <Content Include="img\imagen2.png" />
+    <Content Include="img\Mascota.jpg" />
+    <Content Include="img\Perro1.jpg" />
+    <Content Include="img\Perro2.png" />
     <Content Include="Models\VeterinariaModelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VeterinariaModelo.Context.cs</LastGenOutput>
@@ -222,7 +229,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\personal\Create.cshtml" />
