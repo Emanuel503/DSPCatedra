@@ -1,50 +1,57 @@
 ﻿@{
     ViewBag.Title = "Inicio";
 }
-
+<br />
 <style>
     Body {
         background-image: linear-gradient(270deg, #c2ebff 0, #c2ebff 50%, #c2ebff 100%);
     }
 </style>
 <div class="container">
-
-    <center><h1>Sistema de veterinaria</h1></center>
-
+    <center><h1>Sistema de veterinaria</h1></center><br />
     <div class="row">
-
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
             </ol>
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="~/img/Mascota.jpg" alt="...">
+                    <img src="~/img/Mascota.jpg" alt="Mascota">
                     <div class="carousel-caption">
                         ...
                     </div>
                 </div>
                 <div class="item">
-                    <img src="~/img/Perro1.jpg" alt="...">
+                    <img src="~/img/Perro1.jpg" alt="Perro1">
                     <div class="carousel-caption">
                         ...
                     </div>
                 </div>
-
                 <div class="item">
-                    <img src="~/img/Perro2.png" alt="...">
+                    <img src="~/img/Perro2.png" alt="Perro2">
                     <div class="carousel-caption">
                         ...
                     </div>
                 </div>
-
+                <div class="item">
+                    <img src="~/img/Perro3.jpg" alt="Perro3">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/Gato.jpg" alt="Gato">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
             </div>
-
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -55,8 +62,8 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
     </div>
+    <br />
 
     <div class="row">
         <div class="col-md-4">
@@ -67,44 +74,51 @@
                 fecha de ingreso, edad y algunos datos extra a su profesion, tambien realizamos una interfaz de usuario que sea llamativa como estitca
             </p>
         </div>
+        <br />
         <div class="col-md-4">
-            <h3 class="titulo2">¿Como creamos dicho proyecto Final?</h3>
+            <center>
+                <h3 class="titulo2">¿Como creamos dicho proyecto Final?</h3>
+            </center>
             <p class="P2">
-                Como equipo de trabajo seria la primera vez que se trabajaria con ASP.NET
-                surgen dudas del como poder incluso crear lo aparentemente sencillo.
-                Se realizo una investigacion, partiendo de las bases del dicho programa.
+                Este proyecto lo realizamops con ASP.NET(.Net Framework) y con Entity Framework. Utilizamos la funcion de entity llamada DataBase First
+                con el que creamos nuestro modelo y generamos los controladores y vistas correspodientes a cada entidad, se generaron tres formularios los cuales
+                piden al usuario que registre el personal, registre la mascota y que registre la consulta medica, cada una de las vistas tiene la posibilidad de
+                editar, ver detalles e eliminar, de igual manera se le muestra todos los registros de cada una de las entidades.
             </p>
         </div>
+        <br />
         <div class="col-md-4">
-            <h4>Descarga</h4>
-            <p class="P3"></p>
-            <p><a class="btn btn-default" href="https://github.com/Emanuel503/DSPCatedra">Codigo del Proyecto Final &raquo;</a></p>
+            <h3 class="titulo2">Descarga</h3>
+            <p class="P3">
+                Si gustas ver lo que hay detras de nuestro proyecto final, puedes obtener el codigo aqui de GitHub.
+            </p>
+            <br />
+            <center>
+                <a class="btn btn-info btn-lg" href="https://github.com/Emanuel503/DSPCatedra">Codigo del proyecto Final &raquo;</a><br /><br /><br /><br />
+                <img  width="60%" src="~/img/Huella.png" />
+            </center>
         </div>
     </div>
-   
+</div>
     <div class="row">
-        <center><h1>Servicios</h1></center>
+        <h1>Servicios</h1>
         <ul class="servicios">
             <li>
-                <img class="imagen1" src="~/img/Estetoscopio.png" alt="estetoscopio vector" width="35%" />
+                <img class="imagen1" src="~/img/Estetoscopio.png" alt="estetoscopio vector" />
                 <p class="parrafo1">Consulta medica</p>
             </li>
-
             <li>
                 <img class="imagen1" src="~/img/imagen2.png" alt="Jeringa" />
                 <p class="parrafo2">vacuna</p>
             </li>
-
             <li>
-                <img class="imagen1" src="~/img/imagen2.png" alt="Jeringa" />
-                <p class="parrafo2">vacuna</p>
+                <img class="imagen1" src="~/img/Calendario.png" alt="Citas" />
+                <p class="parrafo2">Citas</p>
             </li>
-
             <li>
-                <img class="imagen1" src="~/img/imagen2.png" alt="Jeringa" />
-                <p class="parrafo2">vacuna</p>
+                <img class="imagen1" src="~/img/Medicamento.png" alt="Jeringa" />
+                <p class="parrafo2">Medicamento</p>
             </li>
         </ul>
     </div>
-
 </div>

@@ -63,18 +63,17 @@ textarea {
     color: black;
     width: 30%;
 }
-
 p {
     line-height: 2em;
     font-size: 16px;
     text-align: justify;
     color: black;
 }
-
 .P1 {
     background: #18a3ff;
     padding: 7px;
     border-radius: 20px;
+    line-height: 2.5em;
 }
 
 .P2 {
@@ -87,8 +86,8 @@ p {
     background: #18a3ff;
     padding: 7px;
     border-radius: 20px;
+    
 }
-
 .servicios {
     width: 1000px;
     list-style: none;
